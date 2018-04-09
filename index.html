@@ -1,6 +1,32 @@
 <html>
 <head>
   <title>Heketi RESTful Test1</title>
+
+  <script src="http://staticserver-staticassets.apps.demolab.local/scripts/jquery-3.3.1.min.js"></script>
+
+  <script>
+  
+    function executeAPI()
+    {
+      $(document).ready(function() 
+      {
+        rootURL = document.getElementById( "rooturl" ).value;
+        endpoint = document.getElementById( "endpoint" ).value;
+
+        targetURL = rootURL + "/" _ endpoint;
+
+        $.ajax(
+        {
+          url: targetURL
+        }).done(function(data) 
+        {
+          document.getElementById(output).value = data;
+        });
+      });      
+    }
+
+  </script>
+
 </head>
 <body>
 <img src="http://staticserver-staticassets.apps.demolab.local/images/openshift_logo.png" width="300px"/><br/>
